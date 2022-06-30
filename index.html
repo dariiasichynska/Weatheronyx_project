@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>2.0 Weatheronyx</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-7">
+              <input
+                type="text"
+                placeholder="Choose city"
+                autocomplete="off"
+                autofocus="on"
+                id="search-location"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                class="button-forecast"
+                value="Search"
+                id="search-button"
+              />
+            </div>
+            <div class="col-2">
+              <button
+                class="button-forecast"
+                value="Current"
+                id="current-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <small>
+          Now in <span id="city-selected">City</span>
+          <span id="dateTime"></span>
+        </small>
+        <h1 id="city-main">City</h1>
+        <div class="row">
+          <div class="col-6" id="left-part">
+            <div class="row">
+              <div class="col-4" id="temperature-now">20</div>
+              <div class="col-4" id="metric-convertion">
+                <a href="#">°C</a> |
+                <a href="#">°F</a>
+              </div>
+              <div class="col-4" id="weather-icon">🌩</div>
+            </div>
+          </div>
+          <div class="col-6" id="right-part">
+            <div class="row">
+              <div class="col-3" id="night-forecast">
+                <h3
+                  class="today-hourly-weather_name"
+                  id="today-hourly-weather_night"
+                >
+                  Night
+                </h3>
+                <br />
+                <span class="emoji" id="emoji-night">🌃 </span>
+                <br />
+                <var class="today-hourly-weather_temp">18</var>
+              </div>
+              <div class="col-3" id="morning-forecast">
+                <h3
+                  class="today-hourly-weather_name"
+                  id="today-hourly-weather_morning"
+                >
+                  Morning
+                </h3>
+                <br />
+                <span class="emoji" id="emoji-morning">🏃‍♀️ </span>
+                <br />
+                <var class="today-hourly-weather_temp">21</var>
+              </div>
+              <div class="col-3" id="day-forecast">
+                <h3
+                  class="today-hourly-weather_name"
+                  id="today-hourly-weather_day"
+                >
+                  Day
+                </h3>
+                <br />
+                <span class="emoji" id="emoji-day">👷‍♂️ </span>
+                <br />
+                <var class="today-hourly-weather_temp">26</var>
+              </div>
+              <div class="col-3" id="evening-forecast">
+                <h3
+                  class="today-hourly-weather_name"
+                  id="today-hourly-weather_evening"
+                >
+                  Evening
+                </h3>
+                <br />
+                <span class="emoji" id="emoji-evening">🌇 </span>
+                <br />
+                <var class="today-hourly-weather_temp">23</var>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="main-forecast">
+          <h2>
+            <var id="sky"></var> Humidity: <var id="humidity"></var> Wind:
+            <var id="wind"></var>
+          </h2>
+          <div>
+            <button class="button-forecast">Today</button>
+            <button class="button-forecast">Tomorrow</button>
+            <button class="button-forecast">Friday</button>
+            <button class="button-forecast">Saturday</button>
+            <button class="button-forecast">Sunday</button>
+          </div>
+        </section>
+        <p class="footer" id="footer">Coded by Dariia Sichynska</p>
+      </div>
+    </div>
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
