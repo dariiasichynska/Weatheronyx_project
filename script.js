@@ -106,3 +106,14 @@ function getWeatherForLocation(position) {
   apiCoordUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiCoordUrl).then(showCurrentTemp);
 }
+
+if (document.getElementById("weather-app").style) {
+  if (7 <= hour && hour < 20) {
+    document.getElementById("weather-app").style.backgroundImage =
+      "url(file:///C:/Users/Boeblingen01/Documents/GitHub/Weatheronyx_project/day.jpg)";
+  } else {
+    document.getElementById("weather-app").style.backgroundImage =
+      "url(file:///C:/Users/Boeblingen01/Documents/GitHub/Weatheronyx_project/night.jpg)";
+    console.log(nightBackgroundImg);
+  }
+}
