@@ -1,6 +1,6 @@
 body {
   background-image: url("day.jpg");
-  background: skyblue;
+  background-color: skyblue;
   font-family: "Roboto Serif", serif;
 }
 .weather-app {
