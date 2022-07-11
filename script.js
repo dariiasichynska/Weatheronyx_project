@@ -110,10 +110,10 @@ function getWeatherForLocation(position) {
 if (document.getElementById("weather-app").style) {
   if (7 <= hour && hour < 20) {
     document.getElementById("weather-app").style.backgroundImage =
-      "url(file:///C:/Users/Boeblingen01/Documents/GitHub/Weatheronyx_project/day.jpg)";
+      "url(day.jpg)";
   } else {
     document.getElementById("weather-app").style.backgroundImage =
-      "url(file:///C:/Users/Boeblingen01/Documents/GitHub/Weatheronyx_project/night.jpg)";
+      "url(night.jpg)";
     console.log(nightBackgroundImg);
   }
 }
