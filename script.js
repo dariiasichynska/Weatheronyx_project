@@ -131,8 +131,9 @@ switch (true) {
     document.getElementById("weather-app").style.backgroundImage =
       "url(sunset.jpg)";
     break;
-  case 22 <= hour && hour < 5:
+  case (0 <= hour && hour < 5) || 22 <= hour:
     document.getElementById("weather-app").style.backgroundImage =
       "url(night.jpg)";
     break;
 }
+console.log(hour);
