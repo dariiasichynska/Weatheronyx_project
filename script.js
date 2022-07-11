@@ -107,13 +107,32 @@ function getWeatherForLocation(position) {
   axios.get(apiCoordUrl).then(showCurrentTemp);
 }
 
-if (document.getElementById("weather-app").style) {
-  if (7 <= hour && hour < 20) {
+// if (document.getElementById("weather-app").style) {
+//   if (7 <= hour && hour < 20) {
+//     document.getElementById("weather-app").style.backgroundImage =
+//       "url(day.jpg)";
+//   } else {
+//     document.getElementById("weather-app").style.backgroundImage =
+//       "url(night.jpg)";
+//     console.log(nightBackgroundImg);
+//   }
+// }
+
+switch (true) {
+  case 10 <= hour && hour < 18:
     document.getElementById("weather-app").style.backgroundImage =
       "url(day.jpg)";
-  } else {
+    break;
+  case 5 <= hour && hour < 10:
+    document.getElementById("weather-app").style.backgroundImage =
+      "url(sunrise.jpg)";
+    break;
+  case 18 <= hour && hour < 22:
+    document.getElementById("weather-app").style.backgroundImage =
+      "url(sunset.jpg)";
+    break;
+  case 22 <= hour && hour < 5:
     document.getElementById("weather-app").style.backgroundImage =
       "url(night.jpg)";
-    console.log(nightBackgroundImg);
-  }
+    break;
 }
